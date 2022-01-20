@@ -4,6 +4,44 @@
 
 For now, let's write this README as a tutorial for Jade to reproduce our results. At that point, we will be at a great point to clean and publish it.
 
+
+## WAFER data
+
+### Structure of each record
+
+
+```python
+{
+'id': # unique id
+'input': # in-context claim with [CIT] tag
+'output': [ # list of valid urls for the citation
+    {
+    'answer': # a url
+    'provenance': [
+        {
+            'url':  # *mandatory* 
+            'chunk_id': # from the Sphere retrieval engine
+            'title': # not provided, use the script to get this
+            'text': # not provided, use the script to get this
+        }
+    ] 
+    }
+]
+'meta': 
+    {
+        'wikipedia_id': # KILT wikipedia_id
+        'wikipedia_title': # KILT wikipedia_title
+        'wikipedia_section': # KILT wikipedia_section
+        'wikipedia_url': # KILT wikipedia_url
+        'cit_paragraph_id': # KILT cit_paragraph_id
+        'cit_offset': # KILT cit_offset
+        'categories': # KILT categories
+        'sentences': [] # sentences before claim - sentences[-1] contains [CIT]
+        'featured': # fatured flag     
+    }
+}
+```
+
 ## Goal
 
 Run the **side** pipeline on novel and recent Wikipedia articles.
