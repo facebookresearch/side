@@ -1,0 +1,14 @@
+torch
+faiss-cpu>=1.6.1
+filelock
+numpy
+regex
+torch>=1.9.1
+transformers==4.9
+tqdm>=4.27
+wget
+omegaconf>=2.0.1
+jsonlines
+hydra-core==1.1.1
+spacy==2.1.8
+git+ssh://git@github.com/facebookresearch/KILT.git

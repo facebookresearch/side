@@ -1,0 +1,24 @@
+defaults:
+  - /datasets: evaluation
+
+gold_train_file:
+  - wafer_train_split_11
+  - wafer_train_split_12
+  - wafer_train_split_13
+retrieved_bm25_train_file:
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_11.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_12.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_13.jsonl
+retrieved_dpr_train_file:
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_11.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_12.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_13.jsonl
+
+gold_valid_file: wafer_dev
+retrieved_bm25_valid_file: /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-dev-kiltweb.jsonl
+retrieved_dpr_valid_file: /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-dev-kiltweb.jsonl
+
+output_directory:
+
+word_citation_prefix: 200
+word_citation_suffix: 100

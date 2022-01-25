@@ -1,0 +1,19 @@
+retriever: reranker
+
+retriever.ctx_src: wafer_ccnet
+retriever.batch_size: 2
+retriever.checkpoint_dir: /checkpoint/fabiopetroni/WAI/Samuel/checkpoints/crossencoder/52237054/
+retriever.retrieved_data_nr_ctxs: 100
+retriever.retrieved_data_files:
+    - dpr:/checkpoint/fabiopetroni/WAI/Samuel/data/predictions/dpr_remote/46517735/wafer-dev-kiltweb.jsonl
+    - gar:/checkpoint/fabiopetroni/WAI/predictions/GAR-wafer-dev-kiltweb.jsonl
+
+evaluation_datasets:
+  - wafer_dev
+
+# Uncomment to write the prediction files into the corresponding checkpoint directory
+#output_folder: ${retriever.checkpoint_dir}/predictions/${retriever.checkpoint_load_suffix}__${retriever.ctx_src}
+
+
+
+

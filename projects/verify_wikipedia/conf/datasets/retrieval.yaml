@@ -1,0 +1,30 @@
+wafer_010k:
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-kiltweb_010k.tsv
+  _target_: dpr.dataset.retrieval.WaferCsvCtxSrc
+wafer_200k:
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-kiltweb_200k.tsv
+  _target_: dpr.dataset.retrieval.WaferCsvCtxSrc
+
+wafer_ccnet_test:
+  files:
+    - /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-kiltweb_100k.tsv
+    - /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-kiltweb_100k.tsv
+  _target_: dpr.dataset.retrieval.CCNETMultiCsvCtxSrc
+
+wafer_ccnet:
+  files:
+    - /checkpoint/piktus/sphere/cc_net/2019-35/chunks/cc_net_processed_0.tsv
+    - /checkpoint/piktus/sphere/cc_net/2019-35/chunks/cc_net_processed_1.tsv
+    - /checkpoint/piktus/sphere/cc_net/2019-35/chunks/cc_net_processed_2.tsv
+    - /checkpoint/piktus/sphere/cc_net/2019-35/chunks/cc_net_processed_3.tsv
+    - /checkpoint/piktus/sphere/cc_net/2019-35/chunks/cc_net_processed_4.tsv
+    - /checkpoint/piktus/sphere/cc_net/2019-35/chunks/cc_net_processed_5.tsv
+  _target_: dpr.dataset.retrieval.CCNETMultiCsvCtxSrc
+
+wafer_kiltweb_dpr_bm25_reranker_00:
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_reranker_source/wafer-kiltweb.tsv
+  _target_: dpr.dataset.retrieval.WaferCsvCtxSrc
+
+training_reranker_test_wafer_train_kiltweb_11:
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_reranker_test/wafer-train-kiltweb_11.csv
+  _target_: dpr.dataset.retrieval.WaferCsvCtxSrc

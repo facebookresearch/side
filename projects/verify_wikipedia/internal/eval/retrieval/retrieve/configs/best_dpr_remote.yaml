@@ -1,0 +1,19 @@
+retriever: dpr_remote
+
+retriever.ctx_src: wafer_ccnet
+retriever.batch_size: 1024
+retriever.checkpoint_dir: /checkpoint/fabiopetroni/WAI/Samuel/checkpoints/biencoder/50023296/
+retriever.rpc_retriever_cfg_file: /checkpoint/fabiopetroni/WAI/Samuel/distributed-faiss-data/45680605/discovery-config.txt
+
+n_docs: 100
+evaluation_datasets:
+  - wafer_dev
+  - wafer_test
+
+
+# Uncomment to write the prediction files into the corresponding checkpoint directory
+#output_folder: ${retriever.checkpoint_dir}/predictions/${retriever.checkpoint_load_suffix}__${retriever.ctx_src}
+
+
+
+

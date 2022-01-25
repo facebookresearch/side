@@ -1,0 +1,70 @@
+# configuration groups
+defaults:
+  - base_model: hf_bert
+  - trainer: default
+  - train_iterator: default
+  - valid_iterator: default
+  - datasets: training
+  - input_transform: biencoder
+
+task_id: ${now:%Y-%m-%d_%H-%M-%S}
+
+hydra_job_name: ${hydra.job.name}
+
+hydra:
+  run:
+    dir: outputs/${hydra_job_name}/${task_id}
+
+output_dir:
+
+# datasets
+train_datasets:
+dev_datasets:
+multi_dataset_train_sampling_rates:
+
+# DocumentBiEncoder, ColberReranker, Crossencoder
+model_class: DocumentBiEncoder
+
+# hard_em, soft_em, uniform_passage, first_passage
+loss_strategy: uniform
+# soft EM hyper parameters for "loss_strategy: soft_em"
+soft_em:
+  start_temperature: 1.0
+  end_temperature: 1.0
+  warmup_steps: 1
+# scaling loss factor
+loss_scale_factors:
+
+seed: 12345
+checkpoint_file_name: checkpoint
+
+# A trained checkpoint file to initialize the model
+resume:
+  fix_ctx_encoder:
+  model_file:
+  restore_best_metric_from_checkpoint: True
+  ignore_checkpoint_offset: False
+  ignore_checkpoint_optimizer: False
+
+eval_config_template:
+  batch_size:
+  retriever:
+    ctx_src:
+
+# TODO: rename to distributed_rank
+local_rank: -1
+global_loss_buf_sz: 592000
+device:
+distributed_world_size:
+distributed_port:
+distributed_init_method:
+fp16_opt_level:
+
+no_cuda: False
+n_gpu:
+fp16: False
+
+# tokens which won't be split by tokenizer
+special_tokens:
+
+local_shards_dataloader: True

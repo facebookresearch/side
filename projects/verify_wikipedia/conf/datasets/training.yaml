@@ -1,0 +1,27 @@
+wafer-train_010k:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-train-kiltweb_010k.jsonl
+
+wafer-train_200k:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-train-kiltweb_200k.jsonl
+
+wafer-dev:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_dpr/wafer-dev-kiltweb.jsonl
+
+wafer-dev-reranker:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_reranker/wafer-dev-kiltweb.jsonl
+
+wafer-dev123-reranker:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_reranker/wafer-dev123-kiltweb.jsonl
+
+wafer-train-reranker:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_reranker/wafer-train-kiltweb.jsonl
+
+wafer-train10k-reranker:
+  _target_: dpr.dataset.training.JsonWaferDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_reranker/wafer-train10k-kiltweb.jsonl

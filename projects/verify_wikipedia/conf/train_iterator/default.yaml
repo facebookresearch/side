@@ -1,0 +1,10 @@
+
+
+batch_size: 2
+num_positives: 10
+hard_negatives: 1
+hard_doc_negatives: 0
+other_negatives: 0
+other_doc_negatives: 0
+shuffle_negatives: False
+hard_doc_negatives_filter_bm25_hit: False

@@ -1,0 +1,61 @@
+train_datasets: wafer-train-reranker # use wafer-train10k-reranker for prototyping
+#train_datasets: wafer-train10k-reranker # use wafer-train10k-reranker for prototyping
+dev_datasets: wafer-dev-reranker # wafer-dev123-reranker for prototyping
+
+base_model:
+  encoder_model_type: hf_roberta
+  pretrained_model_cfg: roberta-large
+  dropout: 0.1
+  pretrained: True
+  share_parameters: True
+  projection_dim: 0
+
+input_transform:
+  question:
+    type: only_before_cit+dropout_title
+    dropout: 0.5
+  passage:
+    type: title+text
+
+trainer:
+  learning_rate: 5.0e-05
+  gradient_accumulation_steps: 5
+  eval_per_epoch: 1
+  warmup_steps: 100
+  log_batch_step: 50
+
+train_iterator:
+  batch_size: 1 # for multi-node training: 1; for single-node training: same as nr of GPUs
+  num_positives: 4
+  other_negatives: 7
+  shuffle_negatives: True
+
+valid_iterator:
+  batch_size: 4
+  num_positives: 20
+  other_negatives: 200
+
+model_class: ColbertRerankerBiEncoder
+
+loss_strategy: soft_em
+soft_em:
+  start_temperature: 0.00001
+  end_temperature: 1.0
+  warmup_steps: 5000
+
+resume:
+  model_file:
+  restore_best_metric_from_checkpoint: False
+  ignore_checkpoint_offset: True
+
+hydra:
+  job:
+    name: colbert
+
+special_tokens: ['[CIT]', '[URL]', '[SYSTEM]', '[TITLE]', '[SECTION]', '[TEXT]',  '[RANK:0]', '[RANK:1]', '[RANK:2]', '[RANK:3]', '[RANK:4]', '[RANK:5]', '[RANK:6]', '[RANK:7]', '[RANK:8]', '[RANK:9]', '[RANK:10]', '[RANK:11]', '[RANK:12]', '[RANK:13]', '[RANK:14]', '[RANK:15]', '[RANK:16]', '[RANK:17]', '[RANK:18]', '[RANK:19]', '[RANK:20]', '[RANK:21]', '[RANK:22]', '[RANK:23]', '[RANK:24]', '[RANK:25]', '[RANK:26]', '[RANK:27]', '[RANK:28]', '[RANK:29]', '[RANK:30]', '[RANK:31]', '[RANK:32]', '[RANK:33]', '[RANK:34]', '[RANK:35]', '[RANK:36]', '[RANK:37]', '[RANK:38]', '[RANK:39]', '[RANK:40]', '[RANK:41]', '[RANK:42]', '[RANK:43]', '[RANK:44]', '[RANK:45]', '[RANK:46]', '[RANK:47]', '[RANK:48]', '[RANK:49]', '[RANK:50]', '[RANK:51]', '[RANK:52]', '[RANK:53]', '[RANK:54]', '[RANK:55]', '[RANK:56]', '[RANK:57]', '[RANK:58]', '[RANK:59]', '[RANK:60]', '[RANK:61]', '[RANK:62]', '[RANK:63]', '[RANK:64]', '[RANK:65]', '[RANK:66]', '[RANK:67]', '[RANK:68]', '[RANK:69]', '[RANK:70]', '[RANK:71]', '[RANK:72]', '[RANK:73]', '[RANK:74]', '[RANK:75]', '[RANK:76]', '[RANK:77]', '[RANK:78]', '[RANK:79]', '[RANK:80]', '[RANK:81]', '[RANK:82]', '[RANK:83]', '[RANK:84]', '[RANK:85]', '[RANK:86]', '[RANK:87]', '[RANK:88]', '[RANK:89]', '[RANK:90]', '[RANK:91]', '[RANK:92]', '[RANK:93]', '[RANK:94]', '[RANK:95]', '[RANK:96]', '[RANK:97]', '[RANK:98]', '[RANK:99]']
+output_dir: outputs
+
+eval_config_template:
+  batch_size: 2
+  retriever:
+    ctx_src: wafer_ccnet

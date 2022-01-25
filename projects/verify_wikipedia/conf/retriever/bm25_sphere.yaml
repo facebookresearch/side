@@ -1,0 +1,27 @@
+defaults:
+  - /datasets: retrieval
+
+ctx_src:
+
+# Batch size to generate query embeddings
+batch_size: 128
+
+# BM25
+threads: 8
+indexing_threads: 8
+
+id2url_map_pickle:
+
+bm25_index_base_dir: .
+
+index_dir: /private/home/fabiopetroni/2021/Sphere/cc_net_passages_v2
+tmp_dir: ${.bm25_index_base_dir}/bm25_index/${.ctx_src}/tmp/
+
+output_folder:
+
+Xms:
+Xmx:
+
+question_transform_type: title+sentence_1
+
+_target_: evaluation.retrievers.bm25.BM25

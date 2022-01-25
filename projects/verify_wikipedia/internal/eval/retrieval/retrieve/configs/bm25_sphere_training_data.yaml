@@ -1,0 +1,20 @@
+retriever: bm25_sphere
+evaluation_datasets:
+  - wafer_train_split_11
+  - wafer_train_split_12
+  - wafer_train_split_13
+  - wafer_train_split_14
+  - wafer_train_split_15
+  - wafer_train_split_16
+  - wafer_train_split_17
+  - wafer_train_split_18
+  - wafer_train_split_19
+  - wafer_train_split_20
+  - wafer_train_split_21
+
+# Uncomment to write the prediction files into the corresponding checkpoint directory
+#output_folder: ${retriever.checkpoint_dir}/predictions/${retriever.checkpoint_load_suffix}__${retriever.ctx_src}
+
+
+
+

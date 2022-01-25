@@ -1,0 +1,177 @@
+wafer_train_split_01:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_01.jsonl
+  task_family: Citations
+  name: wafer_train_split_01
+  question_transform_type:
+
+wafer_train_split_02:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_02.jsonl
+  task_family: Citations
+  name: wafer_train_split_02
+  question_transform_type:
+
+wafer_train_split_03:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_03.jsonl
+  task_family: Citations
+  name: wafer_train_split_03
+  question_transform_type:
+
+wafer_train_split_04:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_04.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_05:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_05.jsonl
+  task_family: Citations
+  name: wafer_train_split_03
+  question_transform_type:
+
+wafer_train_split_06:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_06.jsonl
+  task_family: Citations
+  name: wafer_train_split_03
+  question_transform_type:
+
+wafer_train_split_07:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_07.jsonl
+  task_family: Citations
+  name: wafer_train_split_03
+  question_transform_type:
+
+wafer_train_split_08:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_08.jsonl
+  task_family: Citations
+  name: wafer_train_split_03
+  question_transform_type:
+
+wafer_train_split_09:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_09.jsonl
+  task_family: Citations
+  name: wafer_train_split_03
+  question_transform_type:
+
+wafer_train_split_10:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_10.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_11:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_11.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_12:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_12.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_13:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_13.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_14:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_14.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_15:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_15.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_16:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_16.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_17:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_17.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_18:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_18.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_19:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_19.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_20:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_20.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_train_split_21:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/WAI/Samuel/data/training_split/wafer-train-kiltweb_21.jsonl
+  task_family: Citations
+  name: wafer_train_split_04
+  question_transform_type:
+
+wafer_dev:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/KILT/datasets-web/wafer-dev-kiltweb.jsonl
+  task_family: Citations
+  name: wafer-dev-kiltweb
+  question_transform_type:
+
+wafer_test:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/KILT/datasets-web/wafer-test-kiltweb.jsonl
+  task_family: Citations
+  name: wafer-test-kiltweb
+  question_transform_type:
+
+wafer_kiltweb_failed_verification_dev_new:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/KILT/datasets-web/wafer_failed_verification-dev-kiltweb.jsonl
+  task_family: Citations
+  name: wafer_failed_verification-dev-kiltweb
+  question_transform_type:
+
+wafer_kiltweb_failed_verification_test_new:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: /checkpoint/fabiopetroni/KILT/datasets-web/wafer_failed_verification-test-kiltweb.jsonl
+  task_family: Citations
+  name: wafer_failed_verification-test-kiltweb
+  question_transform_type:
+
+
+

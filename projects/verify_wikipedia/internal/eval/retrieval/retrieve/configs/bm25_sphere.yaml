@@ -1,0 +1,10 @@
+retriever: bm25_sphere
+evaluation_datasets:
+  - wafer_dev
+
+# Uncomment to write the prediction files into the corresponding checkpoint directory
+#output_folder: ${retriever.checkpoint_dir}/predictions/${retriever.checkpoint_load_suffix}__${retriever.ctx_src}
+
+
+
+

@@ -1,0 +1,8 @@
+
+batch_size:
+num_positives:
+hard_negatives:
+hard_doc_negatives:
+other_negatives:
+other_doc_negatives:
+hard_doc_negatives_filter_bm25_hit:

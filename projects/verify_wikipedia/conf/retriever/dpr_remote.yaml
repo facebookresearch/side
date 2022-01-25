@@ -1,0 +1,29 @@
+defaults:
+  - /datasets: retrieval
+
+ctx_src: wafer_ccnet
+
+# Batch size to generate query embeddings
+batch_size: 1024
+
+# DPR index
+rpc_hnsw: False
+hnsw_index: False
+
+checkpoint_load_suffix: best_validation_acc  # e.g. "0", "1", "best_validation_acc"
+checkpoint_dir:
+
+out_file: ${.checkpoint_dir}/ctxt_embeddings__${.checkpoint_load_suffix}__${.ctx_src}/shard_
+model_file: ${.checkpoint_dir}/outputs/checkpoint.${.checkpoint_load_suffix}
+output_folder:
+#output_folder: ${.checkpoint_dir}/predictions/${.checkpoint_load_suffix}__${.ctx_src}
+
+# Remote DPR
+
+# Discovery config path of the remote distributed-faiss server
+rpc_retriever_cfg_file: /checkpoint/fabiopetroni/WAI/Samuel/distributed-faiss-data/45680605/discovery-config.txt
+
+# ID of the index to load
+rpc_index_id: hnswsq_default_index
+
+_target_: evaluation.retrievers.dpr_remote.DPR

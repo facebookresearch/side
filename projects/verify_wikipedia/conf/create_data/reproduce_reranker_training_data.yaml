@@ -1,0 +1,17 @@
+defaults:
+  - /datasets: evaluation
+
+gold_train_file: wafer_train_split_03
+retrieved_bm25_train_file:
+retrieved_dpr_train_file:
+
+gold_valid_file: wafer_dev
+retrieved_bm25_valid_file:
+retrieved_dpr_valid_file:
+
+word_citation_prefix: 200
+word_citation_suffix: 100
+
+top_k_retrieved_per_retriever: 100
+
+output_directory:

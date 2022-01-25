@@ -1,0 +1,26 @@
+defaults:
+  - /datasets: evaluation
+
+ccnet_chunks_glob: /checkpoint/piktus/sphere/cc_net/2019-35/chunks/*
+
+gold_train_file: wafer_train_split_02
+retrieved_train_file:
+
+gold_valid_file: wafer_dev
+retrieved_valid_file:
+
+nr_negative_passage_samples: 30
+nr_negative_doc_ctxt_passages: 30
+
+word_citation_prefix: 200
+word_citation_suffix: 100
+
+chunk_id_url_map: /checkpoint/piktus/sphere/chunk_id_url.pkl
+
+output_directory:
+
+id_field: chunk_id #
+
+create_hard_negatives: False
+create_doc_negatives: False
+

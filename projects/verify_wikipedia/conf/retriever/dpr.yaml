@@ -1,0 +1,20 @@
+defaults:
+  - /datasets: retrieval
+
+ctx_src:
+
+# Batch size to generate query embeddings
+batch_size: 1024
+
+# DPR index
+rpc_hnsw: False
+hnsw_index: False
+
+checkpoint_load_suffix: best_validation_acc  # e.g. "0", "1", "best_validation_acc"
+checkpoint_dir:
+
+out_file: ${.checkpoint_dir}/ctxt_embeddings__${.checkpoint_load_suffix}__${.ctx_src}/shard_
+model_file: ${.checkpoint_dir}/outputs/checkpoint.${.checkpoint_load_suffix}
+output_folder: ${.checkpoint_dir}/predictions/${.checkpoint_load_suffix}__${.ctx_src}"
+
+_target_: evaluation.retrievers.dpr.DPR

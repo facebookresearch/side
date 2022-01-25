@@ -1,0 +1,53 @@
+train_datasets: wafer-train_200k # use wafer-train_010k for prototyping
+#train_datasets: wafer-train_010k # use wafer-train_010k for prototyping
+dev_datasets: wafer-dev
+
+trainer:
+  eval_per_epoch: 4
+  gradient_accumulation_steps: 10
+
+train_iterator:
+  batch_size: 1 # for multi-node training: 1; for single-node training: same as nr of GPUs
+  num_positives: 10
+  hard_negatives: 0
+  hard_doc_negatives: 0
+  other_negatives: 20
+  other_doc_negatives: 20
+
+valid_iterator:
+  batch_size: 4
+  num_positives: 10
+  hard_negatives: 10
+  hard_doc_negatives: 10
+  other_negatives: 10
+  other_doc_negatives: 10
+
+model_class: DocumentBiEncoder
+loss_strategy: soft_em
+
+hydra_job_name: biencoder
+
+special_tokens: ['[CIT]']
+
+soft_em:
+  start_temperature: 0.00001
+  end_temperature: 1.0
+  warmup_steps: 25000
+
+input_transform:
+  question:
+    type: only_before_cit+dropout_title+section
+    dropout: 0.5
+  passage.type: title+text
+
+eval_config_template:
+  retriever:
+    ctx_src: wafer_kiltweb_10M_sampled_new
+
+resume:
+  model_file:
+  restore_best_metric_from_checkpoint: False
+  ignore_checkpoint_offset: True
+  fix_ctx_encoder: True
+
+output_dir: outputs

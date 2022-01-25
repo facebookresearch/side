@@ -1,0 +1,34 @@
+defaults:
+  - datasets: retrieval
+
+task_id: ${now:%Y-%m-%d_%H-%M-%S}
+
+# Name of the all-passages resource as it is called in datasets
+ctx_src:
+
+# e.g. /private/home/samuelbroscheit/PycharmProjects/DPR/outputs/200k__uniform/44459071
+checkpoint_dir:
+# e.g. "0", "1", "best_validation_acc"
+checkpoint_load_suffix: best_validation_acc
+
+out_file: ${checkpoint_dir}/ctxt_embeddings__${checkpoint_load_suffix}__${ctx_src}/shard_
+
+# A trained bi-encoder checkpoint file to initialize the model
+model_file: ${checkpoint_dir}/outputs/checkpoint.${checkpoint_load_suffix}
+
+# which (ctx or query) encoder to be used for embedding generation
+encoder_type: ctx
+
+# Number(0-based) of data shard to process
+shard_id: 0
+
+# Total amount of data shards
+num_shards: 1
+
+# Batch size for the passage encoder forward pass (works in DataParallel mode)
+batch_size: 32
+
+temp_dataset:
+  file:
+  _target_: dpr.dataset.retrieval.WaferCsvCtxSrc
+

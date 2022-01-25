@@ -1,0 +1,48 @@
+defaults:
+  - /datasets: evaluation
+
+gold_train_file:
+  - wafer_train_split_11
+  - wafer_train_split_12
+  - wafer_train_split_13
+  - wafer_train_split_14
+  - wafer_train_split_15
+  - wafer_train_split_16
+  - wafer_train_split_17
+  - wafer_train_split_18
+  - wafer_train_split_19
+  - wafer_train_split_20
+  - wafer_train_split_21
+retrieved_bm25_train_file:
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_11.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_12.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_13.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_14.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_15.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_16.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_17.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_18.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_19.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_20.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_bm25/wafer-train-kiltweb_21.jsonl
+retrieved_dpr_train_file:
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_11.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_12.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_13.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_14.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_15.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_16.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_17.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_18.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_19.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_20.jsonl
+  - /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-train-kiltweb_21.jsonl
+
+gold_valid_file: wafer_dev
+retrieved_bm25_valid_file: /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-dev-kiltweb.jsonl
+retrieved_dpr_valid_file: /checkpoint/fabiopetroni/WAI/Samuel/data/retrieved_dpr/wafer-dev-kiltweb.jsonl
+
+output_directory:
+
+word_citation_prefix: 200
+word_citation_suffix: 100
