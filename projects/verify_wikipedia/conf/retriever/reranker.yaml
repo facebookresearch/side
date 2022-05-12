@@ -1,0 +1,19 @@
+defaults:
+  - /datasets: retrieval
+
+ctx_src:
+
+# Batch size to generate query embeddings
+batch_size: 128
+
+checkpoint_load_suffix: best_validation_acc  # e.g. "0", "1", "best_validation_acc"
+checkpoint_dir:
+
+retrieved_data_nr_ctxs: 100
+retrieved_data_files: []
+
+model_file: ${.checkpoint_dir}/outputs/checkpoint.${.checkpoint_load_suffix}
+#output_folder: ${.checkpoint_dir}/predictions/${.checkpoint_load_suffix}__${.ctx_src}
+output_folder:
+
+_target_: evaluation.retrievers.reranker.Reranker

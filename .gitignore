@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Developer tools
+.vscode/
+/node_modules/
+
+# Installation files
+*.egg-info/
+eggs/
+.eggs/
+*.egg
+
+.DS_Store
+
+# web
+web/side/api/__pycache__/api.cpython-37.pyc
+web/side2/api/__pycache__/api.cpython-37.pyc
+web/side/next.config.js
+web/side/prisma/dev.db
+web/side/prisma/dev.db-journal
+
+# data
+data/
+
+# src
+src/
+

@@ -1,0 +1,8 @@
+do_lower_case: True
+
+question:
+  type: only_before_cit+title
+  dropout: 0.0
+
+passage:
+  type: text+title

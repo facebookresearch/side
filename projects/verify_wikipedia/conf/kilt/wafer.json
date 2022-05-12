@@ -1,0 +1,6 @@
+{
+    "WAFER": {
+        "test": "outputs/predictions/expanded_inputs/wafer-test.jsonl",
+        "dev": "outputs/predictions/expanded_inputs/wafer-dev.jsonl"
+    }
+}

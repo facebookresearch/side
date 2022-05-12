@@ -1,0 +1,22 @@
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+
+wafer_dev:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: ../../../../../../data/wafer-dev.jsonl
+  task_family: Citations
+  name: wafer-dev-kiltweb
+  question_transform_type:
+
+wafer_test:
+  _target_: evaluation.dataset.WaferCCNetTaskDataset
+  file: ../../../../../../data/wafer-dev.jsonl
+  task_family: Citations
+  name: wafer-test-kiltweb
+  question_transform_type:
+
+

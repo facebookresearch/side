@@ -1,0 +1,27 @@
+# Copyright (c) Facebook, Inc. and its affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+# model type. One of [hf_bert, pytext_bert, fairseq_roberta]
+encoder_model_type: hf_bert
+
+# HuggingFace's config name for model initialization
+pretrained_model_cfg: bert-large-uncased
+
+# Some encoders need to be initialized from a file
+pretrained_file:
+
+# Extra linear layer on top of standard bert/roberta encoder
+projection_dim: 0
+
+# Max length of the encoder input sequence
+sequence_length: 256
+
+dropout: 0.1
+
+# if False, the model won't load pre-trained BERT weights
+pretrained: True
+
+share_parameters: False

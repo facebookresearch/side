@@ -1,0 +1,6 @@
+[submodule "projects/distributed-faiss"]
+	path = projects/distributed-faiss
+	url = git@github.com:facebookresearch/distributed-faiss.git
+[submodule "projects/KILT"]
+	path = projects/KILT
+	url = git@github.com:facebookresearch/KILT.git

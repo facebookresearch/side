@@ -1,0 +1,3 @@
+wafer_ccnet:
+  files:
+  _target_: dpr.dataset.retrieval.CCNETMultiCsvCtxSrc

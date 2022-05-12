@@ -1,0 +1,7 @@
+{
+    "index": "models/sparse/cc_net_bm25",
+    "num_threads": 20,
+    "k": 100,
+    "Xms": "128g",
+    "Xmx": "512g"
+}

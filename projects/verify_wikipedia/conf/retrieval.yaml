@@ -1,0 +1,23 @@
+defaults:
+  - datasets: evaluation
+  - retriever: default
+
+retriever_config:
+
+n_docs: 100
+
+evaluation_datasets:
+  - wafer_dev
+  - wafer_test
+
+output_folder: ${retriever.output_folder}
+output_folder_in_checkpoint_dir: false
+output_suffix:
+task_id: ${now:%Y-%m-%d_%H-%M-%S}
+
+override_output_dir: outputs/predictions/${retriever._target_}/${task_id}/
+
+hydra:
+  run:
+    dir: ${override_output_dir}
+
